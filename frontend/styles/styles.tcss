@@ -1,0 +1,33 @@
+VerticalScroll {
+    min-height: 100vh;
+    scrollbar-size: 1 1;
+    align: center top;
+}
+
+Container {
+    height: auto;
+    align: center middle;
+}
+
+Footer {
+    margin-top: 1;
+}
+
+Label {
+    padding: 1 0 0 1;
+}
+
+Input {
+    width: 1fr;
+}
+
+#prompt_container {
+    height: 8;
+}
+
+#button_container {
+    layout: horizontal;
+    align-horizontal: center;
+    margin-top: 1;
+    margin-bottom: 1;
+}
