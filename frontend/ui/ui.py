@@ -1,5 +1,8 @@
 from textual.containers import VerticalScroll, Container
 from textual.widgets import Header, Footer, Label, Input, TextArea, Button
+from textual.app import App, ComposeResult
+
+from frontend.ui.components.loader import SpinnerWidget
 
 
 class MainUI(VerticalScroll):
@@ -9,12 +12,15 @@ class MainUI(VerticalScroll):
 		yield Footer()
 
 		with Container():
-			yield Label("Audio File Path:", shrink=True)
-			yield Input(id="file", placeholder="Enter the absolute file of the audio here...")
+			yield Label("Audio File Path:", id="file_label", shrink=True)
+			yield Input(id="file", placeholder="Enter the absolute file path of the audio here...")
 
 		with Container(id="button_container"):
 			yield Button("Generate", id="submit_btn", variant="primary")
 
-		with Container():
-			yield Label("Generated Summary:", shrink=True)
+		with Container(id="loader_container"):
+			yield SpinnerWidget("#7F00FF")
+
+		with Container(id="summary_container"):
+			yield Label("Generated Summary:", id="sum_label", shrink=True)
 			yield TextArea(id="summary", placeholder="The generated summary will appear here...", disabled=True)

@@ -1,7 +1,11 @@
 VerticalScroll {
     min-height: 100vh;
     scrollbar-size: 1 1;
+    scrollbar-color: #7F00FF;
+    scrollbar-color-hover: #7F00FF 85%;
+    scrollbar-color-active: #7F00FF 85%;
     align: center top;
+    background: black;
 }
 
 Container {
@@ -9,20 +13,36 @@ Container {
     align: center middle;
 }
 
+Header {
+    background: #7F00FF;
+}
+
 Footer {
     margin-top: 1;
+    background: #7F00FF;
 }
 
 Label {
     padding: 1 0 0 1;
 }
 
-Input {
-    width: 1fr;
+#file_label {
+    color: #7F00FF;
 }
 
-#prompt_container {
-    height: 8;
+#sum_label {
+    color: cyan;
+}
+
+Input {
+    width: 1fr;
+    border: round #7F00FF;
+    background: black;
+}
+
+TextArea {
+    border: ascii cyan;
+    color: cyan;
 }
 
 #button_container {
@@ -30,4 +50,18 @@ Input {
     align-horizontal: center;
     margin-top: 1;
     margin-bottom: 1;
+}
+
+Button {
+    border: double #7F00FF;
+    background: black;
+    color: #7F00FF;
+}
+
+#loader_container {
+    display: none;
+}
+
+#summary_container {
+    display: none;
 }

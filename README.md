@@ -49,15 +49,15 @@ Follow these instructions to set up and run the application on your local machin
 4. Activate the virtual environment
    - On Windows
        ```bash
-       venv\Scripts\activate
+       .venv\Scripts\activate
        ```
    - On macOS / Linux
        ```bash
-       source venv/bin/activate
+       source .venv/bin/activate
        ```
 5. Install the required dependencies
     ```bash
-    pip install textual
+    pip install transformers torch textual
     ```
 
 ### Setup before Every Run
@@ -68,11 +68,11 @@ Follow these instructions to set up and run the application on your local machin
 2. Activate the virtual environment
    - On Windows
        ```bash
-       venv\Scripts\activate
+       .venv\Scripts\activate
        ```
    - On macOS / Linux
        ```bash
-       source venv/bin/activate
+       source .venv/bin/activate
        ```
 
 ### Run the Application
