@@ -24,6 +24,7 @@ def transcribe(file: str, mode: str = "base") -> str:
             "ffmpeg",
             "-y",
             "-i", file,
+            "-v", "quiet",
             "-ac", "1",
             "-ar", "16000",
             tmp_wav
