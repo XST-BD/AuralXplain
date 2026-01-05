@@ -12,5 +12,5 @@ __pycache__/
 *.sublime-project
 *.sublime-workspace
 
-# Requirements hash
-.requirements_hash
+# Temporary files
+tmp/
