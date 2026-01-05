@@ -25,6 +25,7 @@ class AuralXplain(App):
 	@on(Button.Pressed, "#submit_btn")
 	async def on_submit(self):
 		self.query_one("#summary_container").styles.display = "none"
+		self.query_one("#summary", TextArea).text = ""
 		self.query_one("#loader_container").styles.display = "block"
 
 		file_path = self.query_one("#file", Input).value.strip()
@@ -46,8 +47,8 @@ class AuralXplain(App):
 		worker = self.process_audio(file_path)
 		summary = await worker.wait()
 
-		if summary:
-			self.query_one("#summary", TextArea).value = summary
+		if len(summary.strip()) > 0:
+			self.query_one("#summary", TextArea).text = summary.strip()
 			self.query_one("#loader_container").styles.display = "none"
 			self.query_one("#summary_container").styles.display = "block"
 			self.notify("Summary generated successfully!", title="Success")

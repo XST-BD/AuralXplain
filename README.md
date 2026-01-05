@@ -58,7 +58,7 @@ Follow these instructions to set up and run the application on your local machin
         ```
 5. Install the required dependencies
     ```bash
-    pip install transformers torch textual faster-whisper context
+    pip install transformers torch textual faster-whisper
     ```
 
 ### Setup before Every Run
@@ -96,6 +96,8 @@ python3 main.py
 - Enter the absolute path of the audio file you want to summarize.
 - Press the "Generate" button to generate the summary.
 - View the generated summary in the designated area.
+
+> Currently only **English** audio files are supported with accuracy.
 
 ## Built With
 
