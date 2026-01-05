@@ -11,16 +11,16 @@ class MainUI(VerticalScroll):
 		yield Header(show_clock=True)
 		yield Footer()
 
-		with Container():
-			yield Label("Audio File Path:", id="file_label", shrink=True)
-			yield Input(id="file", placeholder="Enter the absolute file path of the audio here...")
+		with Container(id="main_container"):
+			with Container():
+				yield Label("Audio File Path:", id="file_label", shrink=True)
+				yield Input(id="file", placeholder="Enter the absolute file path of the audio here...")
 
-		with Container(id="button_container"):
-			yield Button("Generate", id="submit_btn", variant="primary")
+			with Container(id="button_container"):
+				yield Button("Generate", id="submit_btn", variant="primary")
 
-		with Container(id="loader_container"):
-			yield SpinnerWidget("#7F00FF")
+			with Container(id="loader_container"):
+				yield SpinnerWidget("#7F00FF")
 
-		with Container(id="summary_container"):
-			yield Label("Generated Summary:", id="sum_label", shrink=True)
-			yield TextArea(id="summary", placeholder="The generated summary will appear here...", disabled=True)
+			with Container(id="summary_container"):
+				yield TextArea(id="summary", placeholder="No summary...", disabled=True)

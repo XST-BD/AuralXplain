@@ -1,11 +1,11 @@
 VerticalScroll {
     min-height: 100vh;
+    background: black;
+    align: center top;
     scrollbar-size: 1 1;
     scrollbar-color: #7F00FF;
     scrollbar-color-hover: #7F00FF 85%;
     scrollbar-color-active: #7F00FF 85%;
-    align: center top;
-    background: black;
 }
 
 Container {
@@ -18,50 +18,81 @@ Header {
 }
 
 Footer {
-    margin-top: 1;
     background: #7F00FF;
 }
 
+#main_container {
+    padding: 1 1 1 1;
+}
+
 Label {
-    padding: 1 0 0 1;
+    padding: 0 0 0 1;
 }
 
 #file_label {
     color: #7F00FF;
 }
 
-#sum_label {
-    color: cyan;
-}
-
 Input {
     width: 1fr;
-    border: round #7F00FF;
     background: black;
+    border: round #7F00FF;
+}
+
+#summary_container {
+    display: none;
+    border: panel #7F00FF;
+    border-title-background: #7F00FF;
+    border-title-color: black;
+    border-title-style: bold;
+    border-title-align: center;
 }
 
 TextArea {
-    border: ascii cyan;
-    color: cyan;
+    height: 12;
+    background: black;
+    color: white;
+    border: none;
 }
 
 #button_container {
     layout: horizontal;
     align-horizontal: center;
-    margin-top: 1;
-    margin-bottom: 1;
+    margin: 1 0;
 }
 
 Button {
-    border: double #7F00FF;
     background: black;
     color: #7F00FF;
+    border: double #7F00FF;
 }
 
 #loader_container {
     display: none;
 }
 
-#summary_container {
-    display: none;
+Toast {
+    padding: 0 1;
+    background: #0E0E0E;
+    border: outer #0DE718;
+}
+
+Toast .toast--title {
+    color: #0DE718;
+}
+
+Toast.-warning {
+    border: outer orange;
+}
+
+Toast.-warning .toast--title {
+    color: orange;
+}
+
+Toast.-error {
+    border: outer red;
+}
+
+Toast.-error .toast--title {
+    color: red;
 }

@@ -48,42 +48,45 @@ Follow these instructions to set up and run the application on your local machin
     python -m venv .venv
     ```
 4. Activate the virtual environment
-   - On Windows
-       ```bash
-       .venv\Scripts\activate
-       ```
-   - On macOS / Linux
-       ```bash
-       source .venv/bin/activate
-       ```
+    - On Windows
+        ```bash
+        .venv\Scripts\activate
+        ```
+    - On macOS / Linux
+        ```bash
+        source .venv/bin/activate
+        ```
 5. Install the required dependencies
     ```bash
-    pip install transformers torch textual faster-whisper
+    pip install transformers torch textual faster-whisper context
     ```
 
 ### Setup before Every Run
+
 1. Navigate to the project directory
     ```bash
     cd path/to/folder/AuralXplain
     ```
 2. Activate the virtual environment
-   - On Windows
-       ```bash
-       .venv\Scripts\activate
-       ```
-   - On macOS / Linux
-       ```bash
-       source .venv/bin/activate
-       ```
+    - On Windows
+        ```bash
+        .venv\Scripts\activate
+        ```
+    - On macOS / Linux
+        ```bash
+        source .venv/bin/activate
+        ```
 
 ### Run the Application
 
 #### Windows
+
 ```bash
 python main.py
 ```
 
 #### macOS / Linux
+
 ```bash
 python3 main.py
 ```
