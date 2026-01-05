@@ -29,8 +29,9 @@ Follow these instructions to set up and run the application on your local machin
 
 ### Prerequisites
 
-- Python
-- pip (Python package installer)
+- Python -> [Installation Guide](/guide/PYTHON-INSTALLATION.md)
+- FFmpeg -> [Installation Guide](/guide/FFMPEG-INSTALLATION.md)
+- git (for cloning the repository)
 
 ### Setup before 1st Run
 
@@ -57,7 +58,7 @@ Follow these instructions to set up and run the application on your local machin
        ```
 5. Install the required dependencies
     ```bash
-    pip install transformers torch textual
+    pip install transformers torch textual faster-whisper
     ```
 
 ### Setup before Every Run
@@ -97,6 +98,10 @@ python3 main.py
 
 - **Python** - Core Language
 - **Textual** - TUI Framework
+- **Transformers** - NLP Library
+- **Torch** - Deep Learning Framework
+- **Faster Whisper** - Speech-to-Text Model
+- **FFmpeg** - Audio Processing
 
 ## Authors
 
