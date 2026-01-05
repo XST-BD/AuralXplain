@@ -13,6 +13,11 @@ Container {
     align: center middle;
 }
 
+Horizontal {
+    height: auto;
+    align: center middle;
+}
+
 Header {
     background: #7F00FF;
 }
@@ -26,10 +31,7 @@ Footer {
 }
 
 Label {
-    padding: 0 0 0 1;
-}
-
-#file_label {
+    padding-left: 1;
     color: #7F00FF;
 }
 
@@ -39,8 +41,15 @@ Input {
     border: round #7F00FF;
 }
 
+#loader_container {
+    display: none;
+}
+
 #summary_container {
     display: none;
+}
+
+#summary_box {
     border: panel #7F00FF;
     border-title-background: #7F00FF;
     border-title-color: black;
@@ -48,8 +57,9 @@ Input {
     border-title-align: center;
 }
 
-TextArea {
+#summary {
     height: 12;
+    padding: 1 2;
     background: black;
     color: white;
     border: none;
@@ -67,8 +77,11 @@ Button {
     border: double #7F00FF;
 }
 
-#loader_container {
-    display: none;
+#copy_btn {
+    padding: 1 0;
+    background: #7F00FF;
+    color: black;
+    border: none;
 }
 
 Toast {

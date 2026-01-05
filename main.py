@@ -1,8 +1,8 @@
-from frontend.app import AuralXplain
+from frontend.app import MediaXplain
 
 
 def main():
-	AuralXplain().run()
+	MediaXplain().run()
 
 
 if __name__ == "__main__":

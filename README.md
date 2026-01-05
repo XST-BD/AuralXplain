@@ -1,12 +1,12 @@
 <h1 align="center">MediaXplain</h1>
 
-<p align="center">AI-powered audio summarizer</p>
+<p align="center">AI-powered Audio & Video Summarizer</p>
 
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/XST-BD/AuralXplain.svg)](https://github.com/XST-BD/AuralXplain/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/XST-BD/AuralXplain.svg)](https://github.com/XST-BD/AuralXplain/pulls)
+[![GitHub Issues](https://img.shields.io/github/issues/XST-BD/MediaXplain.svg)](https://github.com/XST-BD/MediaXplain/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/XST-BD/MediaXplain.svg)](https://github.com/XST-BD/MediaXplain/pulls)
 
 </div>
 
@@ -29,19 +29,19 @@ Follow these instructions to set up and run the application on your local machin
 
 ### Prerequisites
 
-- Python -> [Installation Guide](/guide/PYTHON-INSTALLATION.md)
-- FFmpeg -> [Installation Guide](/guide/FFMPEG-INSTALLATION.md)
-- git (for cloning the repository)
+- Python -> [Installation Guide](/docs/PYTHON-INSTALLATION.md)
+- FFmpeg -> [Installation Guide](/docs/FFMPEG-INSTALLATION.md)
+- Git (for cloning the repository)
 
 ### Setup before 1st Run
 
 1. Clone the repository
     ```bash
-    git clone https://github.com/XST-BD/AuralXplain.git
+    git clone https://github.com/XST-BD/MediaXplain.git
     ````
 2. Navigate to the project directory
     ```bash
-    cd path/to/folder/AuralXplain
+    cd path/to/folder/MediaXplain
     ```
 3. Set up a virtual environment (optional but recommended)
     ```bash
@@ -65,7 +65,7 @@ Follow these instructions to set up and run the application on your local machin
 
 1. Navigate to the project directory
     ```bash
-    cd path/to/folder/AuralXplain
+    cd path/to/folder/MediaXplain
     ```
 2. Activate the virtual environment
     - On Windows
@@ -93,11 +93,11 @@ python3 main.py
 
 ## Usage
 
-- Enter the absolute path of the audio file you want to summarize.
+- Enter the absolute path of a audio or a video file you want to summarize.
 - Press the "Generate" button to generate the summary.
 - View the generated summary in the designated area.
 
-> Currently only **English** audio files are supported with accuracy.
+> Currently only **English** audio and video files are supported with accuracy.
 
 ## Built With
 
@@ -106,7 +106,7 @@ python3 main.py
 - **Transformers** - NLP Library
 - **Torch** - Deep Learning Framework
 - **Faster Whisper** - Speech-to-Text Model
-- **FFmpeg** - Audio Processing
+- **FFmpeg** - Media Processing
 
 ## Authors
 

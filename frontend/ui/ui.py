@@ -1,4 +1,4 @@
-from textual.containers import VerticalScroll, Container
+from textual.containers import VerticalScroll, Horizontal, Container
 from textual.widgets import Header, Footer, Label, Input, TextArea, Button
 from textual.app import App, ComposeResult
 
@@ -13,14 +13,22 @@ class MainUI(VerticalScroll):
 
 		with Container(id="main_container"):
 			with Container():
-				yield Label("Audio File Path:", id="file_label", shrink=True)
-				yield Input(id="file", placeholder="Enter the absolute file path of the audio here...")
+				yield Label("Audio/Video File Path:", id="file_label", shrink=True)
+				yield Input(id="media_file", placeholder="Enter the absolute file path of the audio or video here...")
 
 			with Container(id="button_container"):
-				yield Button("Generate", id="submit_btn", variant="primary")
+				yield Button("Generate", id="submit_btn")
 
 			with Container(id="loader_container"):
 				yield SpinnerWidget("#7F00FF")
 
 			with Container(id="summary_container"):
-				yield TextArea(id="summary", placeholder="No summary...", disabled=True)
+				with Container(id="summary_box"):
+					yield TextArea(id="summary", placeholder="No summary...", read_only=True, disabled=True)
+
+				with Container():
+					yield Button("Copy to Clipboard", id="copy_btn")
+
+				with Horizontal():
+					yield Input(id="save_file", placeholder="Enter file name with absolute path to save summary (e.g. \"download/sum.txt\") ...")
+					yield Button("Save Summary", id="save_btn")

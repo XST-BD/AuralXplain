@@ -1,6 +1,6 @@
 # FFmpeg Installation Guide
 
-FFmpeg is a powerful multimedia framework used for processing audio and video files. It is required for audio processing
+FFmpeg is a powerful multimedia framework used for processing audio and video files. It is required for media processing
 in this project. Follow the instructions below to install FFmpeg on your system.
 
 ## Windows
