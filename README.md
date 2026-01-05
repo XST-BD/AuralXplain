@@ -31,23 +31,20 @@ Follow these instructions to set up and run the application on your local machin
 
 - Python -> [Installation Guide](/docs/PYTHON-INSTALLATION.md)
 - FFmpeg -> [Installation Guide](/docs/FFMPEG-INSTALLATION.md)
-- Git (for cloning the repository)
 
 ### Setup before 1st Run
 
-1. Clone the repository
+1. Download the preferred version (latest is recommended) of compressed source folder (`zip` or `tar.gz`) from [the repository releases](https://github.com/XST-BD/MediaXplain/releases).
+2. Extract the downloaded folder.
+3. Open a terminal and navigate to the project directory
     ```bash
-    git clone https://github.com/XST-BD/MediaXplain.git
-    ````
-2. Navigate to the project directory
-    ```bash
-    cd path/to/folder/MediaXplain
+    cd path/to/folder/MediaXplain-x.x.x
     ```
-3. Set up a virtual environment (optional but recommended)
+4. Set up a virtual environment (optional but recommended)
     ```bash
     python -m venv .venv
     ```
-4. Activate the virtual environment
+5. Activate the virtual environment
     - On Windows
         ```bash
         .venv\Scripts\activate
@@ -56,7 +53,7 @@ Follow these instructions to set up and run the application on your local machin
         ```bash
         source .venv/bin/activate
         ```
-5. Install the required dependencies
+6. Install the required dependencies
     ```bash
     pip install transformers torch textual faster-whisper
     ```
@@ -65,7 +62,7 @@ Follow these instructions to set up and run the application on your local machin
 
 1. Navigate to the project directory
     ```bash
-    cd path/to/folder/MediaXplain
+    cd path/to/folder/MediaXplain-x.x.x
     ```
 2. Activate the virtual environment
     - On Windows
@@ -93,9 +90,11 @@ python3 main.py
 
 ## Usage
 
-- Enter the absolute path of a audio or a video file you want to summarize.
+- Enter the absolute path of an audio or a video file you want to summarize.
 - Press the "Generate" button to generate the summary.
 - View the generated summary in the designated area.
+- Copy the summary to clipboard by pressing the "Copy to Clipboard" button.
+- Save the summary to a `.txt` file by pressing the "Save to File" button.
 
 > Currently only **English** audio and video files are supported with accuracy.
 

@@ -87,7 +87,7 @@ Button {
 Toast {
     padding: 0 1;
     background: #0E0E0E;
-    border: outer #0DE718;
+    border: heavy #0DE718;
 }
 
 Toast .toast--title {
@@ -95,7 +95,7 @@ Toast .toast--title {
 }
 
 Toast.-warning {
-    border: outer orange;
+    border: heavy orange;
 }
 
 Toast.-warning .toast--title {
@@ -103,7 +103,7 @@ Toast.-warning .toast--title {
 }
 
 Toast.-error {
-    border: outer red;
+    border: heavy red;
 }
 
 Toast.-error .toast--title {

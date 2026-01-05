@@ -42,39 +42,39 @@ class MediaXplain(App):
 		if not file_path:
 			self.query_one("#loader_container").styles.display = "none"
 			self.query_one("#summary_container").styles.display = "none"
-			self.notify("Please enter an audio or video file path.", title="Empty Audio/Video File Path!", severity="warning")
+			self.notify("Please enter an audio or video file path.", title="Empty Audio/Video File Path!", severity="warning", timeout=1.5)
 			return
 
 		if not os.path.isfile(file_path):
 			self.query_one("#loader_container").styles.display = "none"
 			self.query_one("#summary_container").styles.display = "none"
-			self.notify("File does not exist.", title="Error!", severity="error")
+			self.notify("File does not exist.", title="Error!", severity="error", timeout=1.5)
 			return
 
-		self.notify("Processing media file...", severity="info")
+		self.notify("Processing media file...", severity="warning", timeout=1.5)
 
 		worker = self.process_media(file_path)
 		summary = await worker.wait()
 
-		if len(summary.strip()) > 0:
+		if summary.strip():
 			self.query_one("#summary", TextArea).text = summary.strip()
 			self.query_one("#loader_container").styles.display = "none"
 			self.query_one("#summary_container").styles.display = "block"
-			self.notify("Summary generated successfully.", title="Generated!")
+			self.notify("Summary generated successfully.", title="Generated!", timeout=1.5)
 		else:
 			self.query_one("#loader_container").styles.display = "none"
 			self.query_one("#summary_container").styles.display = "none"
-			self.notify("Failed to generate summary.", title="Error!", severity="error")
+			self.notify("Failed to generate summary.", title="Error!", severity="error", timeout=1.5)
 
 	@on(Button.Pressed, "#copy_btn")
 	def on_copy(self) -> None:
 		summary = self.query_one("#summary", TextArea).text.strip()
 
-		if summary.strip():
+		if summary:
 			self.copy_to_clipboard(summary)
-			self.notify("Successfully copied to clipboard.", title="Copied!")
+			self.notify("Successfully copied to clipboard.", title="Copied!", timeout=1.5)
 		else:
-			self.notify("Nothing to copy.", title="No Summary!", severity="warning")
+			self.notify("Nothing to copy.", title="No Summary!", severity="warning", timeout=1.5)
 
 	@on(Button.Pressed, "#save_btn")
 	def on_save(self) -> None:
@@ -82,22 +82,22 @@ class MediaXplain(App):
 		save_path = self.query_one("#save_file", Input).value.strip()
 
 		if not summary:
-			self.notify("No summary to save.", title="No Summary!", severity="warning")
+			self.notify("No summary to save.", title="No Summary!", severity="warning", timeout=1.5)
 			return
 
 		if not save_path:
-			self.notify("Please provide a file path to save the summary.", title="No File Path to Save!", severity="warning")
+			self.notify("Please provide a file path to save the summary.", title="No File Path to Save!", severity="warning", timeout=1.5)
 			return
 
 		ext = os.path.splitext(save_path)[1].lower()
 		supported_extensions = {".txt"}
 
 		if ext not in supported_extensions:
-			self.notify(f"Unsupported file type {ext}!\n\nSupported file formate is .txt", title="Error!", severity="error")
+			self.notify(f"Unsupported file type {ext}!\n\nSupported file format is .txt", title="Error!", severity="error", timeout=1.5)
 			return
 
 		try:
 			download_summ(summary, save_path)
-			self.notify(f"Summary saved successfully at:\n{save_path}", title="Saved!")
+			self.notify(f"Summary saved successfully at:\n{save_path}", title="Saved!", timeout=1.5)
 		except Exception as e:
-			self.notify(f"Failed to save summary.\n{e}", title="Error!", severity="error")
+			self.notify(f"Failed to save summary.\n{e}", title="Error!", severity="error", timeout=1.5)

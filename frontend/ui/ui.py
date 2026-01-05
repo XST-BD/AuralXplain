@@ -14,7 +14,7 @@ class MainUI(VerticalScroll):
 		with Container(id="main_container"):
 			with Container():
 				yield Label("Audio/Video File Path:", id="file_label", shrink=True)
-				yield Input(id="media_file", placeholder="Enter the absolute file path of the audio or video here...")
+				yield Input(id="media_file", placeholder="Enter the absolute path of an audio or video file...")
 
 			with Container(id="button_container"):
 				yield Button("Generate", id="submit_btn")
@@ -30,5 +30,5 @@ class MainUI(VerticalScroll):
 					yield Button("Copy to Clipboard", id="copy_btn")
 
 				with Horizontal():
-					yield Input(id="save_file", placeholder="Enter file name with absolute path to save summary (e.g. \"download/sum.txt\") ...")
+					yield Input(id="save_file", placeholder="Enter the absolute path to save summary (e.g., \"C:/Downloads/summary.txt\")...")
 					yield Button("Save Summary", id="save_btn")
