@@ -22,6 +22,7 @@ in this project. Follow the instructions below to install FFmpeg on your system.
    ```
 
 ## macOS
+
 1. Open Terminal.
 2. Install Homebrew if you haven't already by running:
    ```bash
@@ -35,26 +36,41 @@ in this project. Follow the instructions below to install FFmpeg on your system.
    ```bash
    ffmpeg -version
    ```
-## Linux (Ubuntu/Debian)
+
+## Linux
+
+## Debian/Ubuntu
+
 1. Open Terminal.
 2. Update the package list:
    ```bash
-   sudo apt update
+   sudo apt install ffmpeg
    ```
-3. 
-    - For Dabian/Ubuntu-based systems, run:
-        ```bash
-        sudo apt install ffmpeg
-        ```
-    - Fedora-based systems, use:
-        ```bash
-        sudo dnf install ffmpeg
-        ```
-    - Arch Linux-based systems, use:
-        ```bash
-        sudo pacman -S ffmpeg
-        ```
-4. After the installation is complete, verify it by running:
+3. After the installation is complete, verify it by running:
+   ```bash
+   ffmpeg -version
+   ```
+
+## Fedora
+
+1. Open Terminal.
+2. Update the package list:
+   ```bash
+   sudo dnf install ffmpeg
+   ```
+3. After the installation is complete, verify it by running:
+   ```bash
+   ffmpeg -version
+   ```
+
+## Arch / Manjaro
+
+1. Open Terminal.
+2. Update the package list:
+   ```bash
+   sudo pacman -S ffmpeg
+   ```
+3. After the installation is complete, verify it by running:
    ```bash
    ffmpeg -version
    ```

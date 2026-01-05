@@ -6,7 +6,8 @@ this project. Follow the instructions below based on your operating system.
 ## Windows
 
 1. Go to this link: https://www.python.org/downloads/windows/
-2. Download the `Windows installer (64-bit)` or `Windows installer (32-bit)` from the Stable Releases section according to your Windows version.
+2. Download the `Windows installer (64-bit)` or `Windows installer (32-bit)` from the Stable Releases section according
+   to your Windows version.
 3. Run the installer. Make sure to check the box that says `Add Python to PATH` before clicking "Install Now".
 4. Follow the prompts to complete the installation.
 5. After the installation is complete, verify it by opening Command Prompt and running:
@@ -32,7 +33,8 @@ this project. Follow the instructions below based on your operating system.
 
 ## Linux
 
-### Ubuntu/Debian
+### Ubuntu / Debian
+
 1. Open Terminal.
 2. Update the package list:
    ```bash
@@ -46,8 +48,9 @@ this project. Follow the instructions below based on your operating system.
    ```bash
    python3 --version
    ```
-   
+
 ### Fedora
+
 1. Open Terminal.
 2. Install Python by running:
    ```bash
@@ -57,8 +60,9 @@ this project. Follow the instructions below based on your operating system.
    ```bash
    python3 --version
    ```
-   
-### Arch Linux
+
+### Arch / Manjaro
+
 1. Open Terminal.
 2. Install Python by running:
    ```bash
