@@ -50,15 +50,7 @@ def summarize(text: str) -> str:
     if len(partial_summaries) == 1:
         return partial_summaries[0]
 
-    combined = " ".join(partial_summaries)
-
-    final = get_summarizer()(
-        combined,
-        max_length=150,
-        min_length=60,
-        do_sample=False
-    )
-
-    return final[0]["summary_text"]
+    combined = "\n".join(partial_summaries)
+    return combined
 
 

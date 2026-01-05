@@ -6,6 +6,9 @@ def audio_to_text_summ(filepath : str) -> str:
     sum : str = ""
     
     trs : str = transcribe(filepath, 'base')
+    print(trs)
     sum = summarize(trs)
 
-    return sum
+    print(sum)
+    return sum 
+
