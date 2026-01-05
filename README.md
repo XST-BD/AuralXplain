@@ -1,4 +1,4 @@
-<h1 align="center">AuralXplain</h1>
+<h1 align="center">MediaXplain</h1>
 
 <p align="center">AI-powered audio summarizer</p>
 
